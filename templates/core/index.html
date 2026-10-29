@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+  <div class="h1 mb-5">
+    ToDo List
+  </div>
+  <ul class="list-group">
+    {% for task in task_list %}
+      <li class="">{{ task.content }}</li>
+      <li>{{ task.datetime }}</li>
+      <li>
+        Tags: {% for tag in task.tags.all %} {{ tag.name }} {% endfor %}
+      </li>
+      <hr>
+    {% endfor %}
+  </ul>
 {% endblock %}

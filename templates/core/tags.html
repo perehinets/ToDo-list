@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+  <ul>
+    {% for tag in tag_list %}
+      <li>{{ tag.name }}</li>
+      <hr>
+    {% endfor %}
+  </ul>
 {% endblock %}
 
