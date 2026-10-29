@@ -25,4 +25,10 @@ class TagCreateView(generic.CreateView):
     success_url = "/tags"
 
 
+class TagUpdateView(generic.UpdateView):
+    model = Tag
+    fields = "__all__"
+    success_url = "/tags"
+
+
 
