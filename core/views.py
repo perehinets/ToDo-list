@@ -19,4 +19,10 @@ class TagListView(generic.ListView):
     template_name = "core/tags.html"
 
 
+class TagCreateView(generic.CreateView):
+    model = Tag
+    fields = "__all__"
+    success_url = "/tags"
+
+
 
